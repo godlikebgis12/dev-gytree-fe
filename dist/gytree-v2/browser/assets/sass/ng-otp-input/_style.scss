@@ -1,0 +1,10 @@
+.ng-otp-input-container {
+    .ng-otp-input-wrapper {
+        .otp-input {
+            &:focus {
+                box-shadow: none;
+            }
+            @apply h-10 w-10 border-0 rounded-none border-b-2 border-theme-lightest-pink outline-none focus:border-x-0 focus:border-t-0;
+        }
+    }
+}

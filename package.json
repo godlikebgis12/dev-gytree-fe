@@ -1,0 +1,20 @@
+{
+  "name": "gytree-v2",
+  "version": "1.0.34",
+  "scripts": {
+    "ng": "ng",
+    "start": "npm run serve:ssr",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "sitemap": "node sitemap-update.js",
+    "dev:ssr": "ng run gytree-v2:serve-ssr",
+    "serve:ssr": "node dist/gytree-v2/server/main.js",
+    "prerender": "ng run gytree-v2:prerender",
+    "build:ssr": "node sitemap-update.js && ng build --aot --configuration production && ng run gytree-v2:server && node postbuild.js && node compress.js && npm version patch && node ./replace.build.js && node ./versioning.build.js"
+  },
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

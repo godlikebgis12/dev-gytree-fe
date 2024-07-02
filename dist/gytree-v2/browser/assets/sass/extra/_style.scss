@@ -1,0 +1,306 @@
+.btn-line {
+    transform: rotateY(180deg);
+
+    @media (min-width: 640px) {
+        transform: none;
+    }
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+[data-te-input-notch-ref] > *,
+[data-te-input-focused] > * {
+    border: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+// .group[data-te-input-focused] .group-data-\[te-input-focused\]\:shadow-\[-1px_0_0_\#3b71ca\2c _0_1px_0_0_\#3b71ca\2c _0_-1px_0_0_\#3b71ca\]
+
+#myDropdown {
+    border-radius: 10px;
+}
+
+#consultDropdown {
+    border-radius: 10px;
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: max-content;
+    min-width: 130px;
+    overflow: auto;
+    z-index: 99;
+}
+
+.dropdown-content a {
+    color: black;
+    background: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+[type="text"]:focus,
+input:where(:not([type])):focus,
+[type="email"]:focus,
+[type="url"]:focus,
+[type="password"]:focus,
+[type="number"]:focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="month"]:focus,
+[type="search"]:focus,
+[type="tel"]:focus,
+[type="time"]:focus,
+[type="week"]:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+    transition: border-color 0.4s ease-in-out;
+    outline: none;
+    border-color: #5b4545;
+    box-shadow: none;
+}
+
+.left-container {
+    --width: 100%;
+    --max-width: 100%;
+    max-width: var(--max-width);
+    width: var(--width);
+    // margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+// @media (min-width: 100%) {
+//     .left-container {
+//         max-width: 100%;
+//     }
+// }
+
+@media (min-width: 1024px) {
+    .left-container {
+        --max-width: calc((100% - 1024px) / 2 + 1024px);
+    }
+}
+
+@media (min-width: 1280px) {
+    .left-container {
+        --max-width: calc((100% - 1280px) / 2 + 1280px);
+    }
+}
+
+@media (min-width: 1536px) {
+    .left-container {
+        --max-width: calc((100% - 1536px) / 2 + 1536px);
+    }
+}
+
+.toast-container {
+    @apply mb-4 p-0 w-fit mx-auto;
+
+    .ngx-toastr {
+        @apply bg-none bg-transparent block w-fit transition-all rounded-lg;
+        padding: 0 !important;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2) !important;
+
+        &:hover {
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.28) !important;
+        }
+    }
+}
+
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.login-page-gredient {
+    background: linear-gradient(
+        270deg,
+        #fff 3.36%,
+        rgba(255, 255, 255, 0.63) 39.9%,
+        rgba(255, 255, 255, 0.43) 59.69%,
+        rgba(255, 255, 255, 0) 90%
+    );
+}
+
+.donotclick {
+    pointer-events: none;
+}
+
+.loading-data {
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+}
+
+.search-dropdown {
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    // width: calc(100% - 327px - 2%);
+    // @media (max-width: 991.8px) {
+    //     width: calc(100% - 122px - 2%);
+    // }
+}
+
+.search-dropdown-dashboard {
+    z-index: 999;
+    position: absolute;
+
+    // width: calc(100% - 327px - 2%);
+    // @media (max-width: 991.8px) {
+    //     width: calc(100% - 122px - 2%);
+    // }
+}
+
+.loading {
+    // padding-right: calc(1.5em + 1.5rem);
+    // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23F1416C'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23F1416C' stroke='none'/%3e%3c/svg%3e");
+    // background-repeat: no-repeat;
+    // background-position: right calc(.375em + .375rem) center;
+    // background-size: calc(.75em + .75rem) calc(.75em + .75rem);
+
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: -0.125em;
+    border: 0.1em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: 0.65s linear infinite spinner-border;
+}
+
+.inputcontainer {
+    position: relative;
+}
+
+.icon-container {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 10px);
+}
+
+.loader {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    animation: around 5.4s infinite;
+}
+
+.card-bg {
+    background-color: #fff;
+    height: auto;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.input-bg {
+    background-color: #f6dfc2;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.txt-white-in-blue {
+    @apply text-theme-brown transition-colors;
+
+    &.grey-in-normal {
+        @apply text-theme-light-grey;
+    }
+}
+
+.bg-theme-dark-skyblue {
+    .txt-white-in-blue {
+        @apply text-white;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="checkbox"] {
+    @apply text-theme-medium-maroon;
+
+    &:focus {
+        --tw-ring-color: #f56464;
+    }
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+#orientation-dashboard-layout.in-ios {
+    @media only screen and (max-height: 575.98px) and (orientation: landscape) {
+        height: calc(100vh - 60px) !important;
+    }
+}
+
+.gytree-chatbot-textbox{
+    .preview-bullet-point .ql-indent-1:not(.ql-direction-rtl), .ql-editor .ql-indent-1:not(.ql-direction-rtl){
+        padding-left: 1.25rem;
+    }
+}
+
+.lineClampParagraph {
+    &>p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+}
